@@ -1,0 +1,15 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/we_connect/vcard/10198951"
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "vcard_10198951.json",
+    "headers": {
+      "Content-Type": "application/json",
+	  "Access-Control-Allow-Origin":"*"
+ 
+    }
+  }
+}

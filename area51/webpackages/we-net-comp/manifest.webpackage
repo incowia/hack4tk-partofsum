@@ -51,6 +51,12 @@
 				"dependencies": [{
 						"webpackageId": "cubx.core.rte@2.3.1",
 						"artifactId": "cubxpolymer"
+					}, {
+						"artifactId": "jquery"
+					}, {
+						"artifactId": "blogentry-view"
+					}, {
+						"artifactId": "activity-view"
 					}
 				],
 				"slots": [{
@@ -86,6 +92,8 @@
 				"dependencies": [{
 						"webpackageId": "cubx.core.rte@2.3.1",
 						"artifactId": "cubxpolymer"
+					}, {
+						"artifactId": "jquery"
 					}
 				],
 				"slots": [{
@@ -121,6 +129,8 @@
 				"dependencies": [{
 						"webpackageId": "cubx.core.rte@2.3.1",
 						"artifactId": "cubxpolymer"
+					}, {
+						"artifactId": "jquery"
 					}
 				],
 				"slots": [{
@@ -140,6 +150,14 @@
 			}
 		],
 		"compoundComponents": [],
-		"utilities": []
+		"utilities": [{
+				"artifactId": "jquery",
+				"description": "",
+				"resources": [
+					"html-import.html"
+				],
+				"dependencies": []
+			}
+		]
 	}
 }

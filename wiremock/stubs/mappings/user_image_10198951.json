@@ -1,0 +1,15 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/user/10198951/image"
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "10198951.jpg",
+    "headers": {
+      "Content-Type": "image/jpg",
+	  "Access-Control-Allow-Origin":"*"
+ 
+    }
+  }
+}
