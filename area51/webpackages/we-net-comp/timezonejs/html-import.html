@@ -1,1 +1,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/timezone-js/0.4.13/date.min.js"></script>
+<script src="vendor/tzdata.js"></script>
+<script>
+	timezoneJS.timezone.loadingScheme = timezoneJS.timezone.loadingSchemes.MANUAL_LOAD;
+	timezoneJS.timezone.loadZoneDataFromObject(tzdata);
+</script>

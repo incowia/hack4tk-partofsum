@@ -4,13 +4,15 @@
 	"lastName": "Mustermann",
 	"gender": "male",
 	"preferredlanguage": "de",
+	"languages": ["de", "en"],
+	"timeZone": "Europe/Berlin",
 	"role":"Enterprise Architect",	
 	"orga": {
 		"id": "150000",
-		"name": "thyssenkrupp ag"
+		"name": "thyssenkrupp AG"
 	},
 	"address": {
-		"street": "thyssenkrupp alle 1",
+		"street": "thyssenkrupp Allee 1",
 		"postalCode": "12345",
 		"city": "Essen",
 		"country": "Deutschland",

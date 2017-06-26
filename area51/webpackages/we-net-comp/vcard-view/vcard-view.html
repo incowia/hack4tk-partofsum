@@ -14,6 +14,7 @@
 						</template>
 					</template>
 					<template is="dom-if" if="[[_isDataAvailable(printData.timeZone)]]">
+						Zeitzone:<br>
 						[[printData.timeZone]]<br>
 						[[_getCurrentTimeInZone(printData.timeZone)]]
 					</template>

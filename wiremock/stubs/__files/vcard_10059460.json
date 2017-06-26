@@ -4,8 +4,9 @@
 	"lastName": "Oppenberg",
 	"gender": "male",
 	"preferredlanguage": "de",
+	"languages": ["de", "en"],
+	"timeZone": "Europe/Berlin",
 	"role":"Service Manager",
-	"languages": ["Deutsch", "Englisch"],
 	"orga": {
 		"id": "12345",
 		"name": "thyssenkrupp Businesss Services GmbH"
