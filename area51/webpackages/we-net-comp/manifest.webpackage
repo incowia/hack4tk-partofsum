@@ -1,152 +1,145 @@
 {
-  "name": "we-net-comp",
-  "groupId": "",
-  "version": "0.1.0-SNAPSHOT",
-  "modelVersion": "9.1.1",
-  "docType": "webpackage",
-  "author": {
-    "name": "Steffen Spranger",
-    "email": "Steffen.Spranger@incowia.de"
-  },
-  "license": "MIT",
-  "keywords": [],
-  "man": [],
-  "artifacts": {
-    "apps": [
-      {
-        "artifactId": "app",
-        "description": "This is a simple pre-generated app.",
-        "runnables": [
-          {
-            "name": "app",
-            "path": "/index.html",
-            "description": "Call this app as a simple demo."
-          }
-        ]
-      },
-      {
-        "artifactId": "docs",
-        "description": "Generated webpackage documentation.",
-        "runnables": [
-          {
-            "name": "docs",
-            "path": "/index.html",
-            "description": "Shows the interface of this component."
-          }
-        ]
-      }
-    ],
-    "elementaryComponents": [
-      {
-        "artifactId": "vcard-view",
-        "description": "This is an elementary-component based on Polymer.",
-        "runnables": [
-          {
-            "name": "demo",
-            "path": "/demo/index.html",
-            "description": "Demo app..."
-          },
-          {
-            "name": "docs",
-            "path": "/docs/index.html",
-            "description": "Shows the interface of this component."
-          }
-        ],
-        "resources": [
-          "vcard-view.html"
-        ],
-        "dependencies": [
-          {
-            "webpackageId": "cubx.core.rte@2.3.1",
-            "artifactId": "cubxpolymer"
-          }
-        ],
-        "slots": [
-          {
-            "slotId": "a",
-            "type": "number",
-            "direction": [
-              "input",
-              "output"
-            ],
-            "value": 10
-          }
-        ]
-      },
-      {
-        "artifactId": "blogentry-view",
-        "description": "This is an elementary-component based on Polymer.",
-        "runnables": [
-          {
-            "name": "demo",
-            "path": "/demo/index.html",
-            "description": "Demo app..."
-          },
-          {
-            "name": "docs",
-            "path": "/docs/index.html",
-            "description": "Shows the interface of this component."
-          }
-        ],
-        "resources": [
-          "blogentry-view.html"
-        ],
-        "dependencies": [
-          {
-            "webpackageId": "cubx.core.rte@2.3.1",
-            "artifactId": "cubxpolymer"
-          }
-        ],
-        "slots": [
-          {
-            "slotId": "a",
-            "type": "number",
-            "direction": [
-              "input",
-              "output"
-            ],
-            "value": 10
-          }
-        ]
-      },
-      {
-        "artifactId": "activity-view",
-        "description": "This is an elementary-component based on Polymer.",
-        "runnables": [
-          {
-            "name": "demo",
-            "path": "/demo/index.html",
-            "description": "Demo app..."
-          },
-          {
-            "name": "docs",
-            "path": "/docs/index.html",
-            "description": "Shows the interface of this component."
-          }
-        ],
-        "resources": [
-          "activity-view.html"
-        ],
-        "dependencies": [
-          {
-            "webpackageId": "cubx.core.rte@2.3.1",
-            "artifactId": "cubxpolymer"
-          }
-        ],
-        "slots": [
-          {
-            "slotId": "a",
-            "type": "number",
-            "direction": [
-              "input",
-              "output"
-            ],
-            "value": 10
-          }
-        ]
-      }
-    ],
-    "compoundComponents": [],
-    "utilities": []
-  }
+	"name": "we-net-comp",
+	"groupId": "",
+	"version": "0.1.0-SNAPSHOT",
+	"modelVersion": "9.1.1",
+	"docType": "webpackage",
+	"author": {
+		"name": "Steffen Spranger",
+		"email": "Steffen.Spranger@incowia.de"
+	},
+	"license": "MIT",
+	"keywords": [],
+	"man": [],
+	"artifacts": {
+		"apps": [{
+				"artifactId": "app",
+				"description": "This is a simple pre-generated app.",
+				"runnables": [{
+						"name": "app",
+						"path": "/index.html",
+						"description": "Call this app as a simple demo."
+					}
+				]
+			}, {
+				"artifactId": "docs",
+				"description": "Generated webpackage documentation.",
+				"runnables": [{
+						"name": "docs",
+						"path": "/index.html",
+						"description": "Shows the interface of this component."
+					}
+				]
+			}
+		],
+		"elementaryComponents": [{
+				"artifactId": "vcard-view",
+				"description": "This is an elementary-component based on Polymer.",
+				"runnables": [{
+						"name": "demo",
+						"path": "/demo/index.html",
+						"description": "Demo app..."
+					}, {
+						"name": "docs",
+						"path": "/docs/index.html",
+						"description": "Shows the interface of this component."
+					}
+				],
+				"resources": [
+					"vcard-view.html"
+				],
+				"dependencies": [{
+						"webpackageId": "cubx.core.rte@2.3.1",
+						"artifactId": "cubxpolymer"
+					}
+				],
+				"slots": [{
+						"slotId": "config",
+						"type": "object",
+						"direction": [
+							"input"
+						]
+					}, {
+						"slotId": "userid",
+						"type": "string",
+						"direction": [
+							"input"
+						]
+					}
+				]
+			}, {
+				"artifactId": "blogentry-view",
+				"description": "This is an elementary-component based on Polymer.",
+				"runnables": [{
+						"name": "demo",
+						"path": "/demo/index.html",
+						"description": "Demo app..."
+					}, {
+						"name": "docs",
+						"path": "/docs/index.html",
+						"description": "Shows the interface of this component."
+					}
+				],
+				"resources": [
+					"blogentry-view.html"
+				],
+				"dependencies": [{
+						"webpackageId": "cubx.core.rte@2.3.1",
+						"artifactId": "cubxpolymer"
+					}
+				],
+				"slots": [{
+						"slotId": "config",
+						"type": "object",
+						"direction": [
+							"input"
+						]
+					}, {
+						"slotId": "userid",
+						"type": "string",
+						"direction": [
+							"input"
+						]
+					}
+				]
+			}, {
+				"artifactId": "activity-view",
+				"description": "This is an elementary-component based on Polymer.",
+				"runnables": [{
+						"name": "demo",
+						"path": "/demo/index.html",
+						"description": "Demo app..."
+					}, {
+						"name": "docs",
+						"path": "/docs/index.html",
+						"description": "Shows the interface of this component."
+					}
+				],
+				"resources": [
+					"activity-view.html"
+				],
+				"dependencies": [{
+						"webpackageId": "cubx.core.rte@2.3.1",
+						"artifactId": "cubxpolymer"
+					}
+				],
+				"slots": [{
+						"slotId": "config",
+						"type": "object",
+						"direction": [
+							"input"
+						]
+					}, {
+						"slotId": "userid",
+						"type": "string",
+						"direction": [
+							"input"
+						]
+					}
+				]
+			}
+		],
+		"compoundComponents": [],
+		"utilities": []
+	}
 }
