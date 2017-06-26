@@ -4,12 +4,14 @@
 	"lastName": "Oppenberg",
 	"gender": "male",
 	"preferredlanguage": "de",
+	"role":"Service Manager",
+	"languages": ["Deutsch", "Englisch"],
 	"orga": {
 		"id": "12345",
 		"name": "thyssenkrupp Businesss Services GmbH"
 	},
 	"address": {
-		"street": "thyssenkrupp alle 1",
+		"street": "thyssenkrupp Allee 1",
 		"postalCode": "12345",
 		"city": "Essen",
 		"country": "Deutschland",

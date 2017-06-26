@@ -4,6 +4,7 @@
 	"lastName": "Mustermann",
 	"gender": "male",
 	"preferredlanguage": "de",
+	"role":"Enterprise Architect",	
 	"orga": {
 		"id": "150000",
 		"name": "thyssenkrupp ag"
