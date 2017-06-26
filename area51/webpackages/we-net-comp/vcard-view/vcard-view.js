@@ -25,6 +25,14 @@
 
 		cubxReady: function () {},
 
+		_isDataAvailable: function (data) {
+			return data !== undefined && data !== null && (Array.isArray(data) ? data.length > 0 : true);
+		},
+		
+		_getImageUrl: function (data) {
+			return 'http://localhost:8080/user/' + data;
+		},
+
 		modelConfigChanged: function (newValue) {},
 
 		modelUseridChanged: function (newValue) {
@@ -35,7 +43,8 @@
 			$.get('http://localhost:8080/we_connect/vcard/' + newValue)
 			.then(function (res) {
 				this.printData = res;
-			}.bind(this));
+			}
+				.bind(this));
 		}
 	});
 }
