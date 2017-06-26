@@ -25,12 +25,7 @@
 
 		cubxReady: function () {},
 
-		modelConfigChanged: function (newValue) {
-			if (!this.isReady) {
-				return;
-			}
-			// TODO
-		},
+		modelConfigChanged: function (newValue) {},
 
 		modelUseridChanged: function (newValue) {
 			if (!this.isReady) {
@@ -40,7 +35,7 @@
 			$.get('http://localhost:8080/we_connect/vcard/' + newValue)
 			.then(function (res) {
 				this.printData = res;
-			});
+			}.bind(this));
 		}
 	});
 }

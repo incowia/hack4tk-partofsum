@@ -24,3 +24,4 @@ webpackages/*_dist/
 webpackages/**/test-results
 
 .workspace
+!.webpackage
