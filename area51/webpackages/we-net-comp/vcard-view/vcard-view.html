@@ -1,39 +1,54 @@
 <dom-module id="vcard-view">
     <template>
-		<template is="dom-if" if="[[_isDataAvailable(printData.image)]]">
-			<div style="display: inline-block;">
-				<img src="[[_getImageUrl(printData.image)]]"></img>
+		<div>
+			<div style="display: inline-block;vertical-align: top;">
+				<template is="dom-if" if="[[_isDataAvailable(printData.image)]]">
+					<div>
+						<img src="[[_getImageUrl(printData.image)]]"></img>
+					</div>
+				</template>
+				<div>
+					<template is="dom-if" if="[[_isDataAvailable(printData.languages)]]">
+						<template is="dom-repeat" items="[[printData.languages]]" as="lang">
+							[[_getLang(lang)]]<br>
+						</template>
+					</template>
+					<template is="dom-if" if="[[_isDataAvailable(printData.timeZone)]]">
+						[[printData.timeZone]]<br>
+						[[_getCurrentTimeInZone(printData.timeZone)]]
+					</template>
+				</div>
 			</div>
-		</template>
-		<div style="display: inline-block;">
-			<template is="dom-if" if="[[model.config.showName]]">
-				[[printData.title]] [[printData.firstName]] [[printData.lastName]]<br>
-			</template>
-			<template is="dom-if" if="[[_isDataAvailable(printData.orga)]]">
-				<span id="[[printData.orga.id]]">[[printData.orga.name]]</span><br>
-			</template>
-			<template is="dom-if" if="[[_isDataAvailable(printData.role)]]">
-				[[printData.role]]<br>
-			</template>
-			<template is="dom-if" if="[[_isDataAvailable(printData.emails)]]">
-				<template is="dom-repeat" items="[[printData.emails]]" as="email">
-					<a href="mailto:[[email.email]]">[[email.email]]</a>
-					<template is="dom-if" if="[[email.primary]]">
-						(primär)
-					</template>
-					<br>
+			<div style="display: inline-block;vertical-align: top;">
+				<template is="dom-if" if="[[model.config.showName]]">
+					[[printData.title]] [[printData.firstName]] [[printData.lastName]]<br>
 				</template>
-			</template>
-			<template is="dom-if" if="[[_isDataAvailable(printData.phones)]]">
-				<template is="dom-repeat" items="[[printData.phones]]" as="phone">
-					[[phone.number]]
-					<template is="dom-if" if="[[phone.mobile]]">
-						(mobil)
-					</template>
-					<br>
+				<template is="dom-if" if="[[_isDataAvailable(printData.orga)]]">
+					<span id="[[printData.orga.id]]">[[printData.orga.name]]</span><br>
 				</template>
-			</template>
-		</div>
+				<template is="dom-if" if="[[_isDataAvailable(printData.role)]]">
+					[[printData.role]]<br>
+				</template>
+				<template is="dom-if" if="[[_isDataAvailable(printData.emails)]]">
+					<template is="dom-repeat" items="[[printData.emails]]" as="email">
+						<a href="mailto:[[email.email]]">[[email.email]]</a>
+						<template is="dom-if" if="[[email.primary]]">
+							(primär)
+						</template>
+						<br>
+					</template>
+				</template>
+				<template is="dom-if" if="[[_isDataAvailable(printData.phones)]]">
+					<template is="dom-repeat" items="[[printData.phones]]" as="phone">
+						[[phone.number]]
+						<template is="dom-if" if="[[phone.mobile]]">
+							(mobil)
+						</template>
+						<br>
+					</template>
+				</template>
+			</div>
+		<div>
     </template>
     <script src="vcard-view.js"></script>
 </dom-module>

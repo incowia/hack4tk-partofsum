@@ -54,6 +54,8 @@
 					}, {
 						"artifactId": "jquery"
 					}, {
+						"artifactId": "timezonejs"
+					}, {
 						"artifactId": "blogentry-view"
 					}, {
 						"artifactId": "activity-view"
@@ -152,6 +154,13 @@
 		"compoundComponents": [],
 		"utilities": [{
 				"artifactId": "jquery",
+				"description": "",
+				"resources": [
+					"html-import.html"
+				],
+				"dependencies": []
+			}, {
+				"artifactId": "timezonejs",
 				"description": "",
 				"resources": [
 					"html-import.html"
