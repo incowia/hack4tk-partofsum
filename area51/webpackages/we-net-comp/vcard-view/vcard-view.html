@@ -48,6 +48,28 @@
 						<br>
 					</template>
 				</template>
+				<template is="dom-if" if="[[_isDataAvailable(printData.socialMedia)]]">
+					<template is="dom-if" if="[[_isDataAvailable(printData.socialMedia.activity)]]">
+						<a href="#" on-tap="_showActivities" style="margin-right:10px;">Aktivität</a>
+					</template>
+					<template is="dom-if" if="[[_isDataAvailable(printData.socialMedia.blogs)]]">
+						<a href="#" on-tap="_showBlogs" style="margin-right:10px;">Blogs</a>
+					</template>
+					<template is="dom-if" if="[[_isDataAvailable(printData.socialMedia.foren)]]">
+						<a href="#" on-tap="_showForen" style="margin-right:10px;">Foren</a>
+					</template>
+					<template is="dom-if" if="[[_isDataAvailable(printData.socialMedia.wikis)]]">
+						<a href="#" on-tap="_showWikis" style="margin-right:10px;">Wikis</a>
+					</template>
+					<template is="dom-if" if="[[_isDataAvailable(printData.socialMedia.communities)]]">
+						<a href="#" on-tap="_showCommunities" style="margin-right:10px;">Communitys</a>
+					</template>
+					<div id="[[activityId]]" style="display:none;"></div>
+					<div id="[[blogsId]]" style="display:none;"></div>
+					<div id="[[forenId]]" style="display:none;"></div>
+					<div id="[[wikisId]]" style="display:none;"></div>
+					<div id="[[communitesId]]" style="display:none;"></div>
+				</template>
 			</div>
 		<div>
     </template>

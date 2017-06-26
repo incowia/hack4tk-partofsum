@@ -6,7 +6,7 @@
 	"preferredlanguage": "de",
 	"languages": ["de", "en"],
 	"timeZone": "Europe/Berlin",
-	"role":"Service Manager",
+	"role": "Service Manager",
 	"orga": {
 		"id": "12345",
 		"name": "thyssenkrupp Businesss Services GmbH"
@@ -20,16 +20,17 @@
 	},
 	"image": "10059460/image",
 	"emails": [{
-		"email": "Sebastian.Oppenberg@thyssenkrupp.com",
-		"primary": true
-	}],
+			"email": "Sebastian.Oppenberg@thyssenkrupp.com",
+			"primary": true
+		}
+	],
 	"phones": [{
-		"number": "+49 1234 123456",
-		"mobile": false
-	},
-	{
-		"number": "+49 170 123455",
-		"mobile": true
-	}],
+			"number": "+49 1234 123456",
+			"mobile": false
+		}, {
+			"number": "+49 170 123455",
+			"mobile": true
+		}
+	],
 	"faxes": ["+49 1234 1234567"]
 }

@@ -6,7 +6,7 @@
 	"preferredlanguage": "de",
 	"languages": ["de", "en"],
 	"timeZone": "Europe/Berlin",
-	"role":"Enterprise Architect",	
+	"role": "Enterprise Architect",
 	"orga": {
 		"id": "150000",
 		"name": "thyssenkrupp AG"
@@ -22,16 +22,35 @@
 	"academicTitle": "Dr.-Ing.",
 	"image": "10198951/image",
 	"emails": [{
-		"email": "user@xdir.tk.test",
-		"primary": true
-	}],
+			"email": "user@xdir.tk.test",
+			"primary": true
+		}
+	],
 	"phones": [{
-		"number": "+49 1234 123456",
-		"mobile": false
-	},
-	{
-		"number": "+49 170 123455",
-		"mobile": true
-	}],
-	"faxes": ["+49 1234 1234567"]
+			"number": "+49 1234 123456",
+			"mobile": false
+		}, {
+			"number": "+49 170 123455",
+			"mobile": true
+		}
+	],
+	"faxes": ["+49 1234 1234567"],
+	"socialMedia": {
+		"activity": [],
+		"blogs": [{
+				"id": 28233403420,
+				"name": "we.lead",
+				"link": "https://we-lead.blog",
+				"lastestEntry": "10198951/28233403420/lastest"
+			}, {
+				"id": 28233403421,
+				"name": "Ingenieurskunst reloaded",
+				"link": "https://ingenieurskunst-reloaded.blog",
+				"lastestEntry": "10198951/28233403420/lastest"
+			}
+		],
+		"foren": [],
+		"wikis": [],
+		"communities": []
+	}
 }
