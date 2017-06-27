@@ -129,10 +129,11 @@
 		
 		_markActive: function (elem) {
 			elem.className = 'socialMediaOption active';
-			var others = elem.parentElement.getElementsByTagName('a');
+			var others = elem.parentElement.children;
+			console.log(others);
 			for (var i = 0; i < others.length; i++) {
 				var e = others[i];
-				if (e !== elem) {
+				if ((e.tagName === 'A' || e.tagName === 'a') && e !== elem) {
 					e.className = 'socialMediaOption';
 				}
 			}
