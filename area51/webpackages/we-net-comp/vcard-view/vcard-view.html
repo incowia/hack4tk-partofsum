@@ -56,7 +56,7 @@
 					</template>
 				</template>
 				<template is="dom-if" if="[[_isDataAvailable(printData.socialMedia)]]">
-					<span class="socialMediaPanel">
+					<div class="socialMediaPanel">
 						<template is="dom-if" if="[[_isDataAvailable(printData.socialMedia.blogs)]]">
 							<a on-tap="_showBlogs" class="socialMediaOption">Blogs</a>
 						</template>
@@ -69,7 +69,7 @@
 						<template is="dom-if" if="[[_isDataAvailable(printData.socialMedia.communities)]]">
 							<a on-tap="_showCommunities" class="socialMediaOption">Communitys</a>
 						</template>
-					<span>
+					<div>
 					<div id="[[blogsId]]" style="display:none;">
 						<blogs-view cubx-webpackage-id="this">
 							<cubx-core-init style="display:none">
