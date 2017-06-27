@@ -53,16 +53,16 @@
 				</template>
 				<template is="dom-if" if="[[_isDataAvailable(printData.socialMedia)]]">
 					<template is="dom-if" if="[[_isDataAvailable(printData.socialMedia.blogs)]]">
-						<a on-tap="_showBlogs" style="margin-right:10px;">Blogs</a>
+						<a on-tap="_showBlogs" class="" style="margin-right:10px;">Blogs</a>
 					</template>
 					<template is="dom-if" if="[[_isDataAvailable(printData.socialMedia.foren)]]">
-						<a on-tap="_showForen" style="margin-right:10px;">Foren</a>
+						<a on-tap="_showForen" class="" style="margin-right:10px;">Foren</a>
 					</template>
 					<template is="dom-if" if="[[_isDataAvailable(printData.socialMedia.wikis)]]">
-						<a on-tap="_showWikis" style="margin-right:10px;">Wikis</a>
+						<a on-tap="_showWikis" class="" style="margin-right:10px;">Wikis</a>
 					</template>
 					<template is="dom-if" if="[[_isDataAvailable(printData.socialMedia.communities)]]">
-						<a on-tap="_showCommunities" style="margin-right:10px;">Communitys</a>
+						<a on-tap="_showCommunities" class="" style="margin-right:10px;">Communitys</a>
 					</template>
 					<div id="[[blogsId]]" style="display:none;">
 						<blogs-view cubx-webpackage-id="this">

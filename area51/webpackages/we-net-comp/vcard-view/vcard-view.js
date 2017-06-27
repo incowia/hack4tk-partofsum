@@ -87,46 +87,63 @@
 			return dt.toString('HH:mm Z', data);
 		},
 
-		_showBlogs: function () {
+		_showBlogs: function (evt) {
 			if (!this.isReady) {
 				return;
 			}
 			var view = document.getElementById(this.blogsId).getElementsByTagName('blogs-view')[0];
 			view.setBlogs(this.printData.socialMedia.blogs);
+			this._markActive(evt.target);
 			this._showDiv(this.blogsId, [this.forenId, this.wikisId, this.communitesId]);
 		},
 
-		_showForen: function () {
+		_showForen: function (evt) {
 			if (!this.isReady) {
 				return;
 			}
 			var view = document.getElementById(this.forenId).getElementsByTagName('links-view')[0];
 			view.setLinks(this.printData.socialMedia.foren);
+			this._markActive(evt.target);
 			this._showDiv(this.forenId, [this.blogsId, this.wikisId, this.communitesId]);
 		},
 
-		_showWikis: function () {
+		_showWikis: function (evt) {
 			if (!this.isReady) {
 				return;
 			}
 			var view = document.getElementById(this.wikisId).getElementsByTagName('links-view')[0];
 			view.setLinks(this.printData.socialMedia.wikis);
+			this._markActive(evt.target);
 			this._showDiv(this.wikisId, [this.forenId, this.blogsId, this.communitesId]);
 		},
 
-		_showCommunities: function () {
+		_showCommunities: function (evt) {
 			if (!this.isReady) {
 				return;
 			}
 			var view = document.getElementById(this.communitesId).getElementsByTagName('links-view')[0];
 			view.setLinks(this.printData.socialMedia.communities);
+			this._markActive(evt.target);
 			this._showDiv(this.communitesId, [this.forenId, this.wikisId, this.blogsId]);
+		},
+		
+		_markActive: function (elem) {
+			elem.className = 'active';
+			var others = elem.parentElement.getElementsByTagName('a');
+			for (var i = 0; i < others.length; i++) {
+				var e = others[i];
+				if (e !== elem) {
+					e.className = '';
+				}
+			}
 		},
 
 		_showDiv: function (show, hide) {
-			document.getElementById(show).style.display = 'block';
+			var showElem = document.getElementById(show);
+			showElem.style.display = 'block';
 			hide.forEach(function (e) {
-				document.getElementById(e).style.display = 'none';
+				var hideElem = document.getElementById(e);
+				hideElem.style.display = 'none';
 			});
 		},
 
