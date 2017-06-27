@@ -25,3 +25,5 @@ webpackages/**/test-results
 
 .workspace
 !.webpackage
+!.npmignore
+!.cubblesignore

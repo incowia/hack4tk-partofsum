@@ -1,0 +1,8 @@
+# Use this file to define the files and folders to be ignored from upload into a Cubbles Base.
+# Matching files can be defined using glob-patterns described at https://github.com/isaacs/node-glob#glob-primer
+
+# Please do not ignore the "manifest.webpackage" file.
+# Please consider, if - according to your webpackage licence - other developers should be able to fork your webpackage (based on the uploaded resources), please DO NOT ignore development related resources like testcases etc.
+
+# default patterns
+**/*.log
