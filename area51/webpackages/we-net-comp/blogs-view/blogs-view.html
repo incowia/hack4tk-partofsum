@@ -4,11 +4,11 @@
 			<ul>
 				<template is="dom-repeat" items="[[printData]]" as="blog">
 					<li>
-						<a href="[[blog.link]]">[[blog.name]]</a> (<a on-tap="_showEntries">letzte Beiträge</a>)
+						<a href="[[blog.link]]" target="[[blog.target]]">[[blog.name]]</a> (<a on-tap="_showEntries">letzte Beiträge</a>)
 						<div style="display:none;">
 							<dl>
 								<template is="dom-repeat" items="[[blog.entries]]" as="entry">
-									<dt><a href="[[entry.link]]">[[entry.title]]</a> von [[_formatDate(entry.time)]]</dt>
+									<dt><a href="[[entry.link]]" target="[[blog.target]]">[[entry.title]]</a> von [[_formatDate(entry.time)]]</dt>
 									<dd>[[entry.content]]</dd>
 								</template>
 							</dl>

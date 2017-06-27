@@ -13,15 +13,6 @@
 	"man": [],
 	"artifacts": {
 		"apps": [{
-				"artifactId": "app",
-				"description": "This is a simple pre-generated app.",
-				"runnables": [{
-						"name": "app",
-						"path": "/index.html",
-						"description": "Call this app as a simple demo."
-					}
-				]
-			}, {
 				"artifactId": "docs",
 				"description": "Generated webpackage documentation.",
 				"runnables": [{

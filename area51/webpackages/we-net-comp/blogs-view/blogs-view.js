@@ -34,12 +34,15 @@
 		
 		_formatDate: function (data) {
 			if (!this.isReady) {
-				return false;
+				return '';
 			}
 			return new Date(data).toLocaleString();
 		},
 		
 		_showEntries: function (evt) {
+			if (!this.isReady) {
+				return;
+			}
 			var elem = evt.target.parentElement.getElementsByTagName('div')[0];
 			if (elem.style.display === 'none') {
 				elem.style.display = 'block';
@@ -59,9 +62,11 @@
 			}
 			var limitBlogs = newValue.length;
 			var limitEntries = -1;
+			var target = '_self';
 			if (this.getConfig()) {
 				limitBlogs = this.getConfig().showEntries ? this.getConfig().showEntries : newValue.length;
 				limitEntries = this.getConfig().showBlogEntries ? this.getConfig().showBlogEntries : -1;
+				target = this.getConfig().linkTarget ? this.getConfig().linkTarget : '_self';
 			}
 			if (limitBlogs > newValue.length) {
 				limitBlogs = newValue.length;
@@ -75,14 +80,18 @@
 			$.when.apply(null, promises).then(function () {
 				var responses = [].slice.apply(arguments);
 				if (limitEntries < 0) {
-					this.printData = responses;
+					this.printData = responses.map(function (e) {
+						e.target = target;
+						return e;
+					});
 					return;
 				}
 				var blogs = [];
 				responses.forEach(function (e) {
 					var blog = {
 						name: e.name,
-						link: e.link
+						link: e.link,
+						target: target
 					};
 					if (e.entries.length > limitEntries) {
 						blog.entries = [];
@@ -95,7 +104,6 @@
 					blogs.push(blog);
 				});
 				this.printData = blogs;
-				console.log(this.printData);
 			}.bind(this));
 		}
 	});

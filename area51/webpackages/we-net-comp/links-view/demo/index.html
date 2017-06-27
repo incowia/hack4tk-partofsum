@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
-    <title>&lt;links-view&gt; demo</title>
-
-    <script src="../../../cubx.core.rte@2.3.1/webcomponents-lite/webcomponents-lite.js"></script>
-
-    <!--
-        Refer to the crc-loader artifact from a Cubbles-Base.
-        Take care: All other dependencies are expected to be available within the same Base!
-
-        Want to add a 'main' -script to be executed after the dependencies have been loaded?
-        If yes, add the following attribute: data-crc-main="js/my-script.js"
-    -->
-    <script src="../../../cubx.core.rte@2.3.1/crc-loader/js/main.js" data-crcinit-loadcif="true"></script>
-
-</head>
-<body>
-<!--  Place cubbles components there. -->
-<links-view cubx-webpackage-id="this"></links-view>
-
-</body>
+	<head>
+		<meta charset="UTF-8">
+		<title>&lt;links-view&gt; demo</title>
+		<script src="../../../cubx.core.rte@2.3.1/webcomponents-lite/webcomponents-lite.js"></script>
+		<script src="../../../cubx.core.rte@2.3.1/crc-loader/js/main.js" data-crcinit-loadcif="true"></script>
+		<script src="demo.js"></script>
+	</head>
+	<body>
+		<label for="links">Links:</label><br>
+		<textarea id="links" cols="100" rows="3">
+[{ "name": "Heise.de", "link": "http://heise.de/" },
+{ "name": "thyssenkrupp", "link": "https://www.thyssenkrupp.com/" }]</textarea>
+		<br>
+		<label for="config">Config:</label><br>
+		<textarea id="config" cols="100" rows="3">
+{ "linkTarget": "_blank" }</textarea>
+		<br>
+		<button type="button" onclick="triggerView()" disabled>submit</button>
+		<br>
+		<hr>
+		<links-view cubx-webpackage-id="this"></links-view>
+	</body>
 </html>
