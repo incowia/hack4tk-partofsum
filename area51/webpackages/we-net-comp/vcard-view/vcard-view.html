@@ -9,14 +9,18 @@
 				</template>
 				<div>
 					<template is="dom-if" if="[[_isDataAvailable(printData.languages)]]">
-						<template is="dom-repeat" items="[[printData.languages]]" as="lang">
-							[[_getLang(lang)]]<br>
-						</template>
+						<ul>
+							<template is="dom-repeat" items="[[printData.languages]]" as="lang">
+								<li>[[_getLang(lang)]]</li>
+							</template>
+						</ul>
 					</template>
 					<template is="dom-if" if="[[_isDataAvailable(printData.timeZone)]]">
-						Zeitzone:<br>
-						[[printData.timeZone]]<br>
-						[[_getCurrentTimeInZone(printData.timeZone)]]
+						<dl>
+							<dt>Zeitzone:</dt>
+							<dd>[[printData.timeZone]]<br>
+							[[_getCurrentTimeInZone(printData.timeZone)]]</dd>
+						</dl>
 					</template>
 				</div>
 			</div>
@@ -31,7 +35,7 @@
 					<span id="[[printData.orga.id]]">[[printData.orga.name]]</span><br>
 				</template>
 				<template is="dom-if" if="[[_isDataAvailable(printData.role)]]">
-					[[printData.role]]<br>
+					<b>[[printData.role]]</b><br>
 				</template>
 				<template is="dom-if" if="[[_isDataAvailable(printData.emails)]]">
 					<template is="dom-repeat" items="[[printData.emails]]" as="email">
@@ -52,18 +56,20 @@
 					</template>
 				</template>
 				<template is="dom-if" if="[[_isDataAvailable(printData.socialMedia)]]">
-					<template is="dom-if" if="[[_isDataAvailable(printData.socialMedia.blogs)]]">
-						<a on-tap="_showBlogs" class="" style="margin-right:10px;">Blogs</a>
-					</template>
-					<template is="dom-if" if="[[_isDataAvailable(printData.socialMedia.foren)]]">
-						<a on-tap="_showForen" class="" style="margin-right:10px;">Foren</a>
-					</template>
-					<template is="dom-if" if="[[_isDataAvailable(printData.socialMedia.wikis)]]">
-						<a on-tap="_showWikis" class="" style="margin-right:10px;">Wikis</a>
-					</template>
-					<template is="dom-if" if="[[_isDataAvailable(printData.socialMedia.communities)]]">
-						<a on-tap="_showCommunities" class="" style="margin-right:10px;">Communitys</a>
-					</template>
+					<span class="socialMediaPanel">
+						<template is="dom-if" if="[[_isDataAvailable(printData.socialMedia.blogs)]]">
+							<a on-tap="_showBlogs" class="socialMediaOption">Blogs</a>
+						</template>
+						<template is="dom-if" if="[[_isDataAvailable(printData.socialMedia.foren)]]">
+							<a on-tap="_showForen" class="socialMediaOption">Foren</a>
+						</template>
+						<template is="dom-if" if="[[_isDataAvailable(printData.socialMedia.wikis)]]">
+							<a on-tap="_showWikis" class="socialMediaOption">Wikis</a>
+						</template>
+						<template is="dom-if" if="[[_isDataAvailable(printData.socialMedia.communities)]]">
+							<a on-tap="_showCommunities" class="socialMediaOption">Communitys</a>
+						</template>
+					<span>
 					<div id="[[blogsId]]" style="display:none;">
 						<blogs-view cubx-webpackage-id="this">
 							<cubx-core-init style="display:none">

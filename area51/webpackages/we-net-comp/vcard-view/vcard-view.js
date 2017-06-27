@@ -128,12 +128,12 @@
 		},
 		
 		_markActive: function (elem) {
-			elem.className = 'active';
+			elem.className = 'socialMediaOption active';
 			var others = elem.parentElement.getElementsByTagName('a');
 			for (var i = 0; i < others.length; i++) {
 				var e = others[i];
 				if (e !== elem) {
-					e.className = '';
+					e.className = 'socialMediaOption';
 				}
 			}
 		},

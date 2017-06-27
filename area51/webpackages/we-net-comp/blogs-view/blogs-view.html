@@ -4,7 +4,7 @@
 			<ul>
 				<template is="dom-repeat" items="[[printData]]" as="blog">
 					<li>
-						<a href="[[blog.link]]" target="[[blog.target]]">[[blog.name]]</a> (<a on-tap="_showEntries">letzte Beiträge</a>)
+						<a href="[[blog.link]]" target="[[blog.target]]">[[blog.name]]</a> (<a on-tap="_showEntries" class="socialMediaBlogEntryMore">letzte Beiträge</a>)
 						<div style="display:none;">
 							<dl>
 								<template is="dom-repeat" items="[[blog.entries]]" as="entry">
