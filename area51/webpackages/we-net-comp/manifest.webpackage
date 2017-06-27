@@ -56,9 +56,9 @@
 					}, {
 						"artifactId": "timezonejs"
 					}, {
-						"artifactId": "blogentry-view"
+						"artifactId": "blogs-view"
 					}, {
-						"artifactId": "activity-view"
+						"artifactId": "links-view"
 					}
 				],
 				"slots": [{
@@ -76,7 +76,7 @@
 					}
 				]
 			}, {
-				"artifactId": "blogentry-view",
+				"artifactId": "links-view",
 				"description": "This is an elementary-component based on Polymer.",
 				"runnables": [{
 						"name": "demo",
@@ -85,17 +85,15 @@
 					}, {
 						"name": "docs",
 						"path": "/docs/index.html",
-						"description": "Shows the interface of this component."
+						"description": "Show the interface of this component."
 					}
 				],
 				"resources": [
-					"blogentry-view.html"
+					"links-view.html"
 				],
 				"dependencies": [{
 						"webpackageId": "cubx.core.rte@2.3.1",
 						"artifactId": "cubxpolymer"
-					}, {
-						"artifactId": "jquery"
 					}
 				],
 				"slots": [{
@@ -105,15 +103,15 @@
 							"input"
 						]
 					}, {
-						"slotId": "userid",
-						"type": "string",
+						"slotId": "links",
+						"type": "array",
 						"direction": [
 							"input"
 						]
 					}
 				]
 			}, {
-				"artifactId": "activity-view",
+				"artifactId": "blogs-view",
 				"description": "This is an elementary-component based on Polymer.",
 				"runnables": [{
 						"name": "demo",
@@ -122,11 +120,11 @@
 					}, {
 						"name": "docs",
 						"path": "/docs/index.html",
-						"description": "Shows the interface of this component."
+						"description": "Show the interface of this component."
 					}
 				],
 				"resources": [
-					"activity-view.html"
+					"blogs-view.html"
 				],
 				"dependencies": [{
 						"webpackageId": "cubx.core.rte@2.3.1",
@@ -142,8 +140,8 @@
 							"input"
 						]
 					}, {
-						"slotId": "userid",
-						"type": "string",
+						"slotId": "blogs",
+						"type": "array",
 						"direction": [
 							"input"
 						]

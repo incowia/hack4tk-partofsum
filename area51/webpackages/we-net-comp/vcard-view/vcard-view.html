@@ -22,7 +22,10 @@
 			</div>
 			<div style="display: inline-block;vertical-align: top;">
 				<template is="dom-if" if="[[model.config.showName]]">
-					[[printData.title]] [[printData.firstName]] [[printData.lastName]]<br>
+					<template is="dom-if" if="[[printData.title]]">
+						[[printData.title]]
+					</template>
+					[[printData.firstName]] [[printData.lastName]]<br>
 				</template>
 				<template is="dom-if" if="[[_isDataAvailable(printData.orga)]]">
 					<span id="[[printData.orga.id]]">[[printData.orga.name]]</span><br>
@@ -49,26 +52,46 @@
 					</template>
 				</template>
 				<template is="dom-if" if="[[_isDataAvailable(printData.socialMedia)]]">
-					<template is="dom-if" if="[[_isDataAvailable(printData.socialMedia.activity)]]">
-						<a href="#" on-tap="_showActivities" style="margin-right:10px;">Aktivität</a>
-					</template>
 					<template is="dom-if" if="[[_isDataAvailable(printData.socialMedia.blogs)]]">
-						<a href="#" on-tap="_showBlogs" style="margin-right:10px;">Blogs</a>
+						<a on-tap="_showBlogs" style="margin-right:10px;">Blogs</a>
 					</template>
 					<template is="dom-if" if="[[_isDataAvailable(printData.socialMedia.foren)]]">
-						<a href="#" on-tap="_showForen" style="margin-right:10px;">Foren</a>
+						<a on-tap="_showForen" style="margin-right:10px;">Foren</a>
 					</template>
 					<template is="dom-if" if="[[_isDataAvailable(printData.socialMedia.wikis)]]">
-						<a href="#" on-tap="_showWikis" style="margin-right:10px;">Wikis</a>
+						<a on-tap="_showWikis" style="margin-right:10px;">Wikis</a>
 					</template>
 					<template is="dom-if" if="[[_isDataAvailable(printData.socialMedia.communities)]]">
-						<a href="#" on-tap="_showCommunities" style="margin-right:10px;">Communitys</a>
+						<a on-tap="_showCommunities" style="margin-right:10px;">Communitys</a>
 					</template>
-					<div id="[[activityId]]" style="display:none;"></div>
-					<div id="[[blogsId]]" style="display:none;"></div>
-					<div id="[[forenId]]" style="display:none;"></div>
-					<div id="[[wikisId]]" style="display:none;"></div>
-					<div id="[[communitesId]]" style="display:none;"></div>
+					<div id="[[blogsId]]" style="display:none;">
+						<blogs-view cubx-webpackage-id="this">
+							<cubx-core-init style="display:none">
+								<cubx-core-slot-init slot="config">{ "showEntries": 3, "showBlogEntries": 1 }</cubx-core-slot-init>
+							</cubx-core-init>
+						</blogs-view>
+					</div>
+					<div id="[[forenId]]" style="display:none;">
+						<links-view cubx-webpackage-id="this">
+							<cubx-core-init style="display:none">
+								<cubx-core-slot-init slot="config">{ "linkTarget": "_blank" }</cubx-core-slot-init>
+							</cubx-core-init>
+						</links-view>
+					</div>
+					<div id="[[wikisId]]" style="display:none;">
+						<links-view cubx-webpackage-id="this">
+							<cubx-core-init style="display:none">
+								<cubx-core-slot-init slot="config">{ "linkTarget": "_blank" }</cubx-core-slot-init>
+							</cubx-core-init>
+						</links-view>
+					</div>
+					<div id="[[communitesId]]" style="display:none;">
+						<links-view cubx-webpackage-id="this">
+							<cubx-core-init style="display:none">
+								<cubx-core-slot-init slot="config">{ "linkTarget": "_blank" }</cubx-core-slot-init>
+							</cubx-core-init>
+						</links-view>
+					</div>
 				</template>
 			</div>
 		<div>

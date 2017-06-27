@@ -1,0 +1,12 @@
+<dom-module id="links-view">
+    <template>
+		<template is="dom-if" if="[[_isDataAvailable(printData)]]">
+			<ul>
+				<template is="dom-repeat" items="[[printData]]" as="link">
+					<li><a href="[[link.link]]" target="[[link.target]]">[[link.name]]</a></li>
+				</template>
+			</ul>
+		</template>
+    </template>
+    <script src="links-view.js"></script>
+</dom-module>

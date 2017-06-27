@@ -1,0 +1,15 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/we_connect/blog/2823420"
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "blog_2823420.json",
+    "headers": {
+      "Content-Type": "application/json",
+	  "Access-Control-Allow-Origin":"*"
+ 
+    }
+  }
+}

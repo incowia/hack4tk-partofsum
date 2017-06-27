@@ -36,21 +36,30 @@
 	],
 	"faxes": ["+49 1234 1234567"],
 	"socialMedia": {
-		"activity": [],
-		"blogs": [{
-				"id": 28233403420,
-				"name": "we.lead",
-				"link": "https://we-lead.blog",
-				"lastestEntry": "10198951/28233403420/lastest"
+		"blogs": [2823420, 2823421],
+		"foren": [{
+				"name": "MusterForum#1",
+				"link": "http://my-forum1.de"
 			}, {
-				"id": 28233403421,
-				"name": "Ingenieurskunst reloaded",
-				"link": "https://ingenieurskunst-reloaded.blog",
-				"lastestEntry": "10198951/28233403420/lastest"
+				"name": "MusterForum#2",
+				"link": "http://my-forum2.de"
 			}
 		],
-		"foren": [],
-		"wikis": [],
-		"communities": []
+		"wikis": [{
+				"name": "MusterWiki#1",
+				"link": "http://my-wiki1.de"
+			}, {
+				"name": "MusterWiki#2",
+				"link": "http://my-wiki2.de"
+			}
+		],
+		"communities": [{
+				"name": "MusterCommunity#1",
+				"link": "http://my-community1.de"
+			}, {
+				"name": "MusterCommunity#2",
+				"link": "http://my-community2.de"
+			}
+		]
 	}
 }

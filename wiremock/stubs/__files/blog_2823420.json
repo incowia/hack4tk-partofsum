@@ -1,0 +1,16 @@
+{
+	"name": "MusterBlog#1",
+	"link": "http://my-blog1.de",
+	"entries": [{
+			"title": "My MusterBlogPost #11",
+			"link": "http://my-blog1.de/11",
+			"content": "My MusterBlogPost #11",
+			"time": "Tue, 27 Jun 2017 00:24:41 GMT"
+		}, {
+			"title": "My MusterBlogPost #12",
+			"link": "http://my-blog1.de/12",
+			"content": "My MusterBlogPost #12",
+			"time": "Tue, 15 Jun 2017 14:54:11 GMT"
+		}
+	]
+}
