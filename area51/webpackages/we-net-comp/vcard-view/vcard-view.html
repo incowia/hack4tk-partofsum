@@ -41,7 +41,6 @@
 					<template is="dom-repeat" items="[[printData.emails]]" as="email">
 						<a href="mailto:[[email.email]]">[[email.email]]</a>
 						<template is="dom-if" if="[[email.primary]]">
-							(primär)
 						</template>
 						<br>
 					</template>
